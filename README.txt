@@ -141,7 +141,7 @@ git push
 9.3: https://railway.app/
 
 ---------- 5.CRIANDO A CONTA NA PLATAFORMA RENDER ----------
-1. Cadastrar a CONTA
+1. Cadastrar a CONTA: gilsondefreitas2014@gmail.com noslig80*
 2. No Painel, criar um banco PostgreSQL (O banco será suspenso em 90 dias)
 -Name: ignite-nodejs-02-db
 -Region: Ohio
