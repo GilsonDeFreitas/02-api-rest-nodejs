@@ -127,6 +127,13 @@ gh repo create
 .....
 gh repo view -w
 
+----
+quando fizer alterações e quiser subir a aplicação, digite
+git add .
+git commit -m "fix: ajuste na rota hello"
+git push 
+
+
 
 9. Plataformas para rodar a aplicação.
 9.1: https://render.com/ (recomendado e usado nesta aula)
