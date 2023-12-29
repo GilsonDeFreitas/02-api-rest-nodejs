@@ -119,3 +119,29 @@ node build/server.js
 node_modules
 build
 
+8. git hub
+git init
+git add .
+git commit -m "Initial commit"
+gh repo create
+
+
+9. Plataformas para rodar a aplicação.
+9.1: https://render.com/ (recomendado e usado nesta aula)
+9.2: https://fly.io/
+9.3: https://railway.app/
+
+---------- 5.CRIANDO A CONTA NA PLATAFORMA RENDER ----------
+1. Cadastrar a CONTA
+2. No Painel, criar um banco PostgreSQL (O banco será suspenso em 90 dias)
+-Name: ignite-nodejs-02-db
+-Region: Ohio
+-Version: 15
+-Instance: Free U$0,00 /mês
+-Clicar no botão Criar Banco de Dados
+
+3.Voltar para a aplicação e instalar o driver do PostgreSQL com o comando
+npm i pg
+
+4. Abrir o arquivo package.json
+alterar o sqlite3 para dependencia de desenvolvimento
