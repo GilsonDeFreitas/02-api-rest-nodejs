@@ -6,7 +6,7 @@ import { checkSessionIdExists } from '../middlewares/check-session-id-exists'
 
 export async function helloRoutes(app: FastifyInstance) {
   app.get('/', async () => {
-    let executar = 'N'
+    let executar = 'S'
     if (executar === 'S') {
       // COMANDOS DDL
       // Tabela: transactions
@@ -17,6 +17,7 @@ export async function helloRoutes(app: FastifyInstance) {
         table.text('title').notNullable()
         table.decimal('amount', 10, 2).notNullable()
         table.timestamp('created_at').defaultTo(knex.fn.now()).notNullable()
+        table.uuid('session_id').after('id').index()
       })
 
       /*
@@ -26,10 +27,11 @@ export async function helloRoutes(app: FastifyInstance) {
         })
         */
 
-      // se quiser incluir só um campo
+      /* se quiser incluir só um campo
       await knex.schema.alterTable('transactions', (table) => {
         table.uuid('session_id').after('id').index()
       })
+      */
 
       // Visualização de recursos
       const tables = await knex('sqlite_schema').select('*')
@@ -50,7 +52,7 @@ export async function helloRoutes(app: FastifyInstance) {
       return { transactions }
     }
 
-    executar = 'S'
+    executar = 'N'
     if (executar === 'S') {
       // Comando para selecionar todos os registros da tabela transactions
       const transactions = await knex('transactions').select('*')

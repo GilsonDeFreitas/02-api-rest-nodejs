@@ -124,6 +124,8 @@ git init
 git add .
 git commit -m "Initial commit"
 gh repo create
+.....
+gh repo view -w
 
 
 9. Plataformas para rodar a aplicação.
