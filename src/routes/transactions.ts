@@ -10,7 +10,7 @@ export async function helloRoutes(app: FastifyInstance) {
     if (executar === 'S') {
       // COMANDOS DDL
       // Tabela: transactions
-      await knex.schema.dropTable('transactions')
+      // await knex.schema.dropTable('transactions')
 
       await knex.schema.createTable('transactions', (table) => {
         table.uuid('id').primary()
